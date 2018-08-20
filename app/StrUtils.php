@@ -13,19 +13,19 @@ class StrUtils{
     }
 
     public function bold(){
-        if(!preg_match("^.*<strong>.*<\/strong>.*$", $this->_str)){
+        if(!preg_match("#^.*<strong>.*<\/strong>.*$#i", $this->_str)){
             $this->_str = '<strong>'. $this->_str .'</strong>';
         }
     }
 
     public function italic(){
-        if(!preg_match("^.*<i>.*<\/i>.*$", $this->_str)){
+        if(!preg_match("#^.*<i>.*<\/i>.*$#i", $this->_str)){
             $this->_str = '<i>'. $this->_str .'</i>';
         }
     }
 
     public function underline(){
-        if(!preg_match("^.*<u>.*<\/u>.*$", $this->_str)){
+        if(!preg_match("#^.*<u>.*<\/u>.*$#i", $this->_str)){
             $this->_str = '<u>'. $this->_str .'</u>';
         }
     }
