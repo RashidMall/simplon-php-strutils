@@ -1,15 +1,19 @@
 <?php 
 
 class StrUtils{
-    private $_str = "default text";
+    private $_str;
 
     public function __construct($str){
-        $str = (string)$str;
-        $this->_str = $str;
+        $this->setStr($str);
     }
 
     public function getStr(){
         return $this->_str;
+    }
+
+    public function setStr($str){
+        $str = (string)$str;
+        $this->_str = $str;
     }
 
     public function bold(){
@@ -40,4 +44,8 @@ class StrUtils{
         $this->underline();
     }
 }
+
+$obj = new StrUtils('Hello');
+$obj->uglify();
+echo $obj->getStr();
 ?>
